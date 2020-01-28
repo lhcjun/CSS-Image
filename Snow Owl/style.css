@@ -1,0 +1,259 @@
+body {
+  margin: auto 0;
+  background-color: rgb(175, 4, 41);
+}
+
+.theOwl {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.head {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(to bottom,
+      rgb(192, 187, 186),
+      rgb(255, 255, 255));
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 20%;
+  margin-bottom: -20%;
+  z-index: 0;
+}
+
+.left_eye,
+.right_eye {
+  display: flex;
+  width: 42%;
+  height: 42%;
+  border-radius: 50%;
+
+  -webkit-animation: rotation 1.5s linear infinite;
+  -moz-animation: rotation 1.5s linear infinite;
+  -o-animation: rotation 1.5s linear infinite;
+  animation: rotation 1.5s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.left_eye {
+  background: linear-gradient(to right top,
+      rgb(218, 116, 0),
+      rgb(233, 179, 33));
+  position: relative;
+  left: 9%;
+  top: 20%;
+  z-index: 2;
+}
+
+.right_eye {
+  background: linear-gradient(to left bottom,
+      rgb(218, 116, 0),
+      rgb(233, 179, 33));
+  position: relative;
+  left: 50%;
+  top: -22%;
+  z-index: 3;
+}
+
+.left_pupil,
+.right_pupil {
+  display: flex;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+}
+
+.left_pupil {
+  position: relative;
+  left: 30%;
+  top: 30%;
+  background: linear-gradient(to top right, rgb(0, 0, 0), rgb(34, 34, 34));
+}
+
+.right_pupil {
+  position: relative;
+  left: 30%;
+  top: 30%;
+  background: linear-gradient(to bottom left, rgb(0, 0, 0), rgb(34, 34, 34));
+}
+
+.beak {
+  width: 22%;
+  height: 33%;
+  background-color: rgb(102, 46, 1);
+  position: relative;
+  left: 40%;
+  top: -40%;
+  clip-path: polygon(50% 0%, 93% 46%, 50% 100%, 6% 47%);
+  z-index: 1;
+}
+
+.body {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.torso {
+  width: 25%;
+  height: 95%;
+  background: linear-gradient(to bottom,
+      rgb(202, 197, 196),
+      rgb(255, 255, 255));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.belly {
+  width: 70%;
+  height: 40%;
+  background: linear-gradient(to bottom, rgb(58, 56, 54), rgb(138, 135, 133));
+  border-radius: 50%;
+  position: relative;
+  top: 60%;
+  left: 15%;
+}
+
+.left_wing,
+.right_wing {
+  width: 30%;
+  height: 80%;
+  margin-top: -10%;
+}
+
+.left_wing {
+  background: linear-gradient(to bottom left,
+      rgb(63, 63, 63),
+      rgb(211, 206, 206),
+      rgb(255, 255, 255));
+  margin-right: -1%;
+  transform: skew(40deg) rotate(15deg);
+  z-index: -2;
+}
+
+.right_wing {
+  background: linear-gradient(to bottom right,
+      rgb(63, 63, 63),
+      rgb(211, 206, 206),
+      rgb(255, 255, 255));
+  margin-left: -1%;
+  transform: skew(-40deg) rotate(-15deg);
+  z-index: -3;
+}
+
+.owl:hover .left_wing {
+  transform: skew(145deg) rotate(15deg);
+  margin-top: 10%;
+  background: linear-gradient(to bottom right,
+      rgb(63, 63, 63),
+      rgb(211, 206, 206),
+      rgb(255, 255, 255));
+}
+
+.owl:hover .right_wing {
+  transform: skew(-145deg) rotate(-15deg);
+  margin-top: 10%;
+  background: linear-gradient(to bottom left,
+      rgb(63, 63, 63),
+      rgb(211, 206, 206),
+      rgb(255, 255, 255));
+}
+
+.tail {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: -11%;
+}
+
+.left1,
+.left2,
+.right1,
+.right2 {
+  width: 9%;
+  height: 60%;
+  background: linear-gradient(to bottom,
+      rgb(63, 63, 63),
+      rgb(211, 206, 206),
+      rgb(255, 255, 255));
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.left1 {
+  transform: rotate(40deg);
+  margin-right: -4.5%;
+  margin-top: -3%;
+  z-index: -4;
+}
+
+.left2 {
+  transform: rotate(15deg);
+  margin-right: -4%;
+  z-index: -5;
+}
+
+.right1 {
+  transform: rotate(-15deg);
+  margin-right: -4.5%;
+  z-index: -6;
+}
+
+.right2 {
+  transform: rotate(-40deg);
+  margin-top: -3%;
+  z-index: -7;
+}
+
+.owl:hover .left1,
+.owl:hover .left2,
+.owl:hover .right1,
+.owl:hover .right2 {
+  width: 9%;
+  height: 60%;
+  background: linear-gradient(to bottom,
+      rgb(94, 94, 94),
+      rgb(167, 166, 166),
+      rgb(255, 255, 255));
+}
